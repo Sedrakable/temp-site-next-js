@@ -11,8 +11,9 @@ const nextConfig = {
   },
   images: {
     domains: ["cdn.sanity.io"],
+    unoptimized: true,
   },
   // output: "export",  // <=== enables static exports
-  reactStrictMode: true,
+  // distDir: "dist",  // <=== change the build directory
 };
 export default nextConfig;
