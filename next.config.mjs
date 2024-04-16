@@ -12,6 +12,7 @@ const nextConfig = {
   images: {
     domains: ["cdn.sanity.io"],
   },
+  // output: "export",  // <=== enables static exports
+  reactStrictMode: true,
 };
-
 export default nextConfig;
