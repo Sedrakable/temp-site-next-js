@@ -1,0 +1,73 @@
+@import "../../styles/mixins.scss";
+
+@mixin sizing($font, $size) {
+  font-size: var(--heading#{$font}-h#{$size});
+  line-height: var(--heading#{$font}-h#{$size}-line);
+}
+
+@mixin level($font, $desk, $lap, $tab, $mob) {
+  @include sizing($font, $mob);
+
+  @media (min-width: $tablet) {
+    @include sizing($font, $tab);
+  }
+
+  @media (min-width: $laptop) {
+    @include sizing($font, $lap);
+  }
+
+  @media (min-width: $desktop) {
+    @include sizing($font, $desk);
+  }
+}
+
+.heading {
+  text-decoration: none !important;
+  &.clickable {
+    &:hover {
+      color: var(--primary) !important;
+    }
+  }
+}
+
+.seto {
+  @include fontHeaderMain;
+
+  @for $i from 1 through 3 {
+    &.level#{$i} {
+      @include level(-main, $i, $i + 1, $i + 1, $i + 2);
+    }
+  }
+  &.level4 {
+    @include level(-main, 4, 4, 4, 5);
+  }
+  &.level5 {
+    @include level(-main, 5, 5, 5, 5);
+  }
+}
+
+.cursive {
+  @include fontHeaderCursive;
+
+  font-weight: 600;
+  @for $i from 1 through 3 {
+    &.level#{$i} {
+      @include level(-cursive, $i, $i + 1, $i + 1, $i + 2);
+    }
+  }
+  &.level4 {
+    @include level(-cursive, 4, 4, 4, 5);
+  }
+  &.level5 {
+    @include level(-cursive, 5, 5, 5, 5);
+  }
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: -100% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
