@@ -93,9 +93,9 @@
 
   .content {
     @include flexColumn(stretch, stretch);
-    > img {
+    .imgWrapper {
       height: calc(100vw * var(--ratio-flip)) !important;
-      max-width: 50%;
+      width: 100vw;
     }
   }
 
@@ -117,13 +117,9 @@
       flex-direction: row !important;
       flex: 1;
       min-width: 100%;
-      > img {
+      .imgWrapper {
         height: 100% !important;
         flex: 1;
-      }
-      .imgGridWrapper {
-        flex: 1;
-        height: 100% !important;
       }
     }
   }

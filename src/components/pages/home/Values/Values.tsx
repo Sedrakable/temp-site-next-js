@@ -35,7 +35,7 @@ const Value: React.FC<IValue & { number: string }> = ({
           as="h4"
           color="black"
           className={styles.title}
-          paddingBottomArray={[1]}
+          paddingBottomArray={[0, 0, 0, 1]}
         >
           {title}
         </Heading>

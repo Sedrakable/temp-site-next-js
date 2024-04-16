@@ -47,6 +47,7 @@
     .legal {
       p {
         text-decoration: underline;
+        width: auto !important;
         // &:hover {
         //   color: var(--primary);
         // }
@@ -57,7 +58,8 @@
         position: relative;
         height: var(--logo-width);
         img {
-          height: 100%;
+          position: relative !important;
+          width: auto !important;
         }
       }
     }

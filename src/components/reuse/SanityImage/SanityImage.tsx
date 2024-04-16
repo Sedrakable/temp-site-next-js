@@ -14,8 +14,10 @@ export const SanityImage: React.FC<ICustomImage> = ({ image, alt }) => {
       <Img
         src={urlFor(image)!.url()}
         alt={alt}
-        width={getImageDimensions(image).width}
-        height={getImageDimensions(image).height}
+        // width={getImageDimensions(image).width}
+        // height={getImageDimensions(image).height}
+        fill
+        // sizes="100%"
         placeholder="blur"
         style={{ objectFit: "cover" }}
         blurDataURL={urlFor(image).width(24).height(24).blur(10).url()}

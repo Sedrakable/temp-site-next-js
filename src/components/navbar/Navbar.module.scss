@@ -20,12 +20,12 @@
 .logo {
   @include vars;
   height: var(--logo-size);
-
+  position: relative;
   transition: 200ms;
   cursor: pointer;
   img {
     height: 100%;
-    width: auto;
+    width: auto !important;
   }
   &:hover {
     transform: scale(1.1);

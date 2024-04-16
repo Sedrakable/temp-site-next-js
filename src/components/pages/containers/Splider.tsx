@@ -137,10 +137,12 @@ export const Splider: React.FC<SpliderContainerProps> = ({
           className={cn({ [styles.content]: splider?.content })}
         >
           {splider?.customImage && (
-            <SanityImage
-              image={splider?.customImage.image}
-              alt={splider?.customImage.alt}
-            />
+            <div className={styles.imgWrapper}>
+              <SanityImage
+                image={splider?.customImage.image}
+                alt={splider?.customImage.alt}
+              />
+            </div>
           )}
           {text && splider?.content && <SideContainer {...splider.content} />}
         </SplideSlide>

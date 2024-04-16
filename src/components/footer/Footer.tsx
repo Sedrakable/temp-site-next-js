@@ -62,21 +62,25 @@ const Logo: React.FC<{ trademark: string; logo: ICustomImage }> = ({
 const Legal: React.FC<{ legals: { title: string; path: string }[] }> = ({
   legals,
 }) => {
-  const [lang] = useAtom(langData);
   return (
     <FlexDiv
       className={styles.legal}
       gapArray={[5]}
       wrap
       flex={{ x: "flex-start" }}
+      width100
     >
       {legals?.map((cta, key) => {
         return (
-          <Link path={`/${lang}${cta?.path!}`} key={key}>
-            <Paragraph level="small" weight="weak" color="grey" clickable>
-              {cta?.title}
-            </Paragraph>
-          </Link>
+          <Paragraph
+            key={key}
+            level="small"
+            weight="weak"
+            color="grey"
+            clickable
+          >
+            {cta?.title}
+          </Paragraph>
         );
       })}
     </FlexDiv>
