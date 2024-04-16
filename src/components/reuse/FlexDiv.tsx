@@ -88,6 +88,7 @@ const FlexDiv: React.ForwardRefRenderFunction<
   } as FlexProps;
 
   const paddingString = Object.entries(paddings)
+    // eslint-disable-next-line no-unused-vars
     ?.map(([_key, value]) => (value ? `var(--pad-${value})` : 0))
     .join(" ");
 

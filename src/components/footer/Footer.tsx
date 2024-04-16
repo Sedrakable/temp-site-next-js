@@ -50,7 +50,7 @@ const Logo: React.FC<{ trademark: string; logo: ICustomImage }> = ({
       padding={{ bottom: [0, 0, 2] }}
     >
       <div className={styles.logo}>
-        <SanityImage {...logo} res={30} />
+        <SanityImage {...logo} />
       </div>
       <Paragraph level="small" weight="weak" color="grey" textAlign="center">
         {trademark}

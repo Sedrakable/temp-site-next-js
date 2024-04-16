@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import {createClient, type QueryParams} from 'next-sanity'
+import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 
 export const client = createClient({
-  projectId: 'hngtneus',
-  dataset: 'production',
+  projectId: "hngtneus",
+  dataset: "production",
   useCdn: true,
   apiVersion: "2024-04-11",
 });

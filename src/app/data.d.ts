@@ -1,4 +1,5 @@
 import { ICustomImage } from "@/components/reuse/SanityImage/SanityImage";
+export { ICustomImage } from "@/components/reuse/SanityImage/SanityImage";
 export interface ICta {
   text: string;
   link?: string;
@@ -156,16 +157,16 @@ export interface INotFound {
   desc: string;
 }
 
-export enum LocalPaths {
-  HOME = "/home",
-  ABOUT = "/about-work",
-  WORK = "/work",
-  CONTACT = "/contact",
-  TERMS = "/terms-and-conditions",
-  PRIVACY = "/privacy-policy",
-  SERVICE = "/service",
-  BRANDING = "/branding",
-  LANDING = "/landing-page",
-  PACKAGE = "/total-package",
-  CUSTOM = "/custom-work",
-}
+// export enum LocalPaths {
+//   HOME = "/home",
+//   ABOUT = "/about-work",
+//   WORK = "/work",
+//   CONTACT = "/contact",
+//   TERMS = "/terms-and-conditions",
+//   PRIVACY = "/privacy-policy",
+//   SERVICE = "/service",
+//   BRANDING = "/branding",
+//   LANDING = "/landing-page",
+//   PACKAGE = "/total-package",
+//   CUSTOM = "/custom-work",
+// }

@@ -34,7 +34,7 @@ export const ImageGrid: React.FC<ImageGridProps> = ({
           return (
             image && (
               <div key={key} className={styles.imgWrapper}>
-                <SanityImage {...image} res={30} key={key} />
+                <SanityImage {...image} key={key} />
               </div>
             )
           );

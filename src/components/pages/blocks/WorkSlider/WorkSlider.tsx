@@ -3,7 +3,7 @@ import styles from "./WorkSlider.module.scss";
 
 import { Splider, SpliderProps } from "../../containers/Splider";
 import FlexDiv from "../../../reuse/FlexDiv";
-import { IWork, IWorkBlock } from "../../../../data.d";
+import { IWork, IWorkBlock } from "@/app/data";
 
 export const WorkSlider: React.FC<PropsWithChildren<IWorkBlock>> = ({
   works,

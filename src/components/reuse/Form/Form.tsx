@@ -2,8 +2,8 @@
 import React, { useRef, useState } from "react";
 import styles from "./Form.module.scss";
 import cn from "classnames";
-import { Button } from "../../reuse/Button";
-import FlexDiv from "../../reuse/FlexDiv";
+import { Button } from "../Button";
+import FlexDiv from "../FlexDiv";
 import { useWindowResize } from "@/helpers/useWindowResize";
 import { useAtom } from "jotai";
 import { langData } from "../../navbar/LangSwitcher/LangSwitcher";

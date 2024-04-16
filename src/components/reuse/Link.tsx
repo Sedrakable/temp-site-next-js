@@ -5,7 +5,6 @@ import React, {
 } from "react";
 import styles from "./Link.module.scss";
 import cn from "classnames";
-import NavLink from "next/link";
 
 export interface LinkProps {
   children: string | ReactNode;
@@ -15,7 +14,7 @@ export interface LinkProps {
 }
 export const Link: React.FC<PropsWithChildren<
   LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>
->> = ({ children, href, className, path, ...props }) => {
+>> = ({ children, className, path, ...props }) => {
   const linkProps = {
     className: cn(styles.link, className),
     ...props,

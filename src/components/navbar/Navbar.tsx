@@ -47,7 +47,7 @@ export const Navbar: React.FC<INavBar> = ({ links, logo }) => {
           height100
         >
           <div className={styles.logo}>
-            <SanityImage {...logo} res={30} />
+            <SanityImage {...logo} />
           </div>
 
           <FlexDiv

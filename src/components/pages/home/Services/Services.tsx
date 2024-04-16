@@ -3,7 +3,7 @@ import styles from "./Services.module.scss";
 import FlexDiv from "../../../reuse/FlexDiv";
 import { Heading } from "../../../reuse/Heading";
 import { Block } from "../../containers/Block";
-import { IService, IServices } from "../../../../data.d";
+import { IService, IServices } from "@/app/data";
 import { useAtom } from "jotai";
 import { langData } from "../../../navbar/LangSwitcher/LangSwitcher";
 import { getTranslations } from "../../../../helpers/langUtils";

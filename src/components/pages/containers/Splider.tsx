@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
+
 import {
   Options,
   Splide,
   SplideSlide,
   SplideTrack,
+  // @ts-ignore
 } from "@splidejs/react-splide";
 import styles from "./Splider.module.scss";
 
@@ -22,6 +24,7 @@ export interface SpliderContainerProps {
   slides: SpliderProps[];
   arrows?: boolean;
   splideProgress?: number;
+  // eslint-disable-next-line no-unused-vars
   setSplideProgress?: (progress: number) => void;
 }
 
@@ -42,7 +45,7 @@ export const Splider: React.FC<SpliderContainerProps> = ({
       const splideInstance = mainRef.current.splide;
 
       if (splideInstance) {
-        splideInstance.on("move", (index) => {
+        splideInstance.on("move", (index: number) => {
           if (setSplideProgress) {
             setSplideProgress(index);
           }

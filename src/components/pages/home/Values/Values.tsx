@@ -4,7 +4,7 @@ import FlexDiv from "../../../reuse/FlexDiv";
 import { Heading } from "../../../reuse/Heading";
 import { Block } from "../../containers/Block";
 import { Paragraph } from "../../../reuse/Paragraph";
-import { IValue, IValues } from "../../../../data";
+import { IValue, IValues } from "@/app/data";
 import { useAtom } from "jotai";
 import { langData } from "../../../navbar/LangSwitcher/LangSwitcher";
 import { getTranslations } from "../../../../helpers/langUtils";

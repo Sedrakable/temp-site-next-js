@@ -3,7 +3,7 @@ import { IconType } from "../reuse/Icon";
 import { Heading } from "../reuse/Heading";
 import { IconButton } from "../reuse/IconButton";
 import FlexDiv from "../reuse/FlexDiv";
-import { ICta, ISocials } from "../../data";
+import { ICta, ISocials } from "@/app/data";
 
 export const Socials: React.FC<ISocials> = ({ title, links }) => {
   return (
@@ -14,7 +14,7 @@ export const Socials: React.FC<ISocials> = ({ title, links }) => {
         </Heading>
       )}
       <FlexDiv gapArray={[3]} wrap flex={{ x: "flex-start" }}>
-        {links?.map((link: ICta, key) => {
+        {links?.map((link: ICta, key: number) => {
           return (
             true && (
               <IconButton

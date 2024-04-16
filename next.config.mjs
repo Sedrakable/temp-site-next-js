@@ -10,8 +10,8 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['cdn.sanity.io']
-}
+    domains: ["cdn.sanity.io"],
+  },
 };
 
 export default nextConfig;

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styles from "./ContactBlock.module.scss";
-import { Form } from "../../contact page/Form";
+import { Form } from "../../../reuse/Form/Form";
 import { Block } from "../../containers/Block";
 import FlexDiv from "../../../reuse/FlexDiv";
 

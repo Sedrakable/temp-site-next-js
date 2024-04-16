@@ -1,8 +1,7 @@
 import { useFetchPage } from "./useFetchPage";
-import { LangType } from "../components/navbar/LangSwitcher/LangSwitcher";
 
-import { HomePageProps } from "../components/pages/HomePage";
-import { IColorTheme, IFooter, INavBar, ISettings } from "../data";
+import { HomePageProps } from "@/app/pages";
+import { IFooter, INavBar, ISettings } from "@/app/data";
 
 const { generateQueries } = require("./generateSanityQueries");
 

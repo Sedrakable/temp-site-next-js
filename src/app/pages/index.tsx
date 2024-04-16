@@ -1,5 +1,11 @@
 import React, { FC } from "react";
-import { ICustomImage, IHero, IServices, IValues, IWorkBlock } from "../data";
+import {
+  ICustomImage,
+  IHero,
+  IServices,
+  IValues,
+  IWorkBlock,
+} from "@/app/data";
 import { Hero } from "@/components/reuse/Hero/Hero";
 import { WorkSlider } from "@/components/pages/blocks/WorkSlider/WorkSlider";
 import { Services } from "@/components/pages/home/Services/Services";

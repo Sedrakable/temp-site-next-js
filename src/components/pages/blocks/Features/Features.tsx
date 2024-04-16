@@ -3,7 +3,7 @@ import styles from "./Features.module.scss";
 import cn from "classnames";
 import FlexDiv from "../../../reuse/FlexDiv";
 import { Block, BlockVariantType } from "../../containers/Block";
-import { IFeature, IFeatures } from "../../../../data";
+import { IFeature, IFeatures } from "@/app/data";
 import { SanityImage } from "../../../reuse/SanityImage/SanityImage";
 import { Paragraph } from "../../../reuse/Paragraph";
 import { useAtom } from "jotai";
@@ -21,7 +21,7 @@ const Feature: React.FC<IFeature> = ({ title, customImage, desc }) => {
       className={styles.container}
     >
       <div className={styles.imgWrapper}>
-        <SanityImage {...customImage} res={20} />
+        <SanityImage {...customImage} />
       </div>
       <FlexDiv
         flex={{ direction: "column", x: "flex-start", y: "flex-start" }}
@@ -59,7 +59,7 @@ export const Features: React.FC<FeaturesProps> = ({
   const translations = getTranslations(lang);
 
   return (
-    <Block title={translations.blockTitles.features} variant={variant} strokes>
+    <Block title={translations.blockTitles.features} variant={variant}>
       <FlexDiv
         gapArray={[2, 3, 3, 4]}
         flex={{ y: "flex-start" }}

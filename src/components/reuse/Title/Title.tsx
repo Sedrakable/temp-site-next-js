@@ -3,7 +3,6 @@ import styles from "./Title.module.scss";
 
 import FlexDiv from "../../reuse/FlexDiv";
 import { ColorType, Heading } from "../../reuse/Heading";
-import { ReactComponent as ButtonStroke } from "../../../assets/illu/ButtonStroke.svg";
 
 interface TitleProps {
   title: string;

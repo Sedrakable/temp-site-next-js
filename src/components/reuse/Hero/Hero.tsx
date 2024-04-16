@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Hero.module.scss";
 import cn from "classnames";
 import { Paragraph } from "../Paragraph";
-import { IHero } from "../../../data.d";
+import { IHero } from "@/app/data";
 import FlexDiv from "../FlexDiv";
 
 import { Button } from "../Button";
@@ -23,11 +23,7 @@ export const Hero: React.FC<IHero> = ({
   return (
     <div className={cn(styles.hero)}>
       <FlexDiv className={styles.right}>
-        <SanityImage
-          image={customImage?.image}
-          alt={customImage?.alt}
-          res={50}
-        />
+        <SanityImage image={customImage?.image} alt={customImage?.alt} />
         <FlexDiv
           className={styles.container}
           flex={{ direction: "column", x: "flex-start", y: "flex-start" }}
