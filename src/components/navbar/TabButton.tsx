@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Heading } from "../reuse/Heading";
 import styles from "./TabButton.module.scss";
 import cn from "classnames";
-import { ReactComponent as Line } from "../../assets/illu/Line.svg";
+import Line from "@/assets/vector/Line.svg";
 import FlexDiv from "../reuse/FlexDiv";
 export interface TabButtonProps {
   children: string;

@@ -1,3 +1,4 @@
+import { ICustomImage } from "@/components/reuse/SanityImage/SanityImage";
 export interface ICta {
   text: string;
   link?: string;
@@ -16,14 +17,13 @@ export interface IHexType {
   hex: string;
 }
 
-export interface ICustomImage {
-  alt: string;
-  image: IImage;
-}
 export interface IImage {
   asset: {
     _ref: string;
     _type: string;
+    metadata: {
+      lqip: string;
+    };
   };
   _type: string;
 }
@@ -86,7 +86,7 @@ export interface IProcess {
 }
 
 export interface IValues {
-  values: ValueProps[];
+  values: IValue[];
 }
 
 export interface IValue {
@@ -97,7 +97,6 @@ export interface IValue {
 export interface IAboutContent {
   customImage: ICustomImage;
   name?: string;
-  title1: FancyTextProps;
   desc1: string;
   title2?: string;
   desc2?: string;

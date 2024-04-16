@@ -5,7 +5,7 @@ import { Paragraph } from "../reuse/Paragraph";
 import { Link } from "../reuse/Link";
 import FlexDiv from "../reuse/FlexDiv";
 import { useWindowResize } from "../../helpers/useWindowResize";
-import { ICustomImage, IFooter, INavBar } from "../../data.d";
+import { ICustomImage, IFooter, INavBar } from "@/app/data";
 import { Socials } from "./Socials";
 import { useAtom } from "jotai";
 import { langData } from "../navbar/LangSwitcher/LangSwitcher";

@@ -1,18 +1,11 @@
 import React, { FC } from "react";
-
-import {
-  IHero,
-  IServices,
-  IValues,
-  IWorkBlock,
-  ICustomImage,
-} from "../../data.d";
-import { Hero } from "../reuse/Hero/Hero";
-import { Values } from "./home/Values/Values";
-import { Services } from "./home/Services/Services";
-import { WorkSlider } from "./blocks/WorkSlider/WorkSlider";
-import { ImageGrid } from "./blocks/ImageGrid/ImageGrid";
-import { ContactBlock } from "./blocks/ContactBlock/ContactBlock";
+import { ICustomImage, IHero, IServices, IValues, IWorkBlock } from "../data";
+import { Hero } from "@/components/reuse/Hero/Hero";
+import { WorkSlider } from "@/components/pages/blocks/WorkSlider/WorkSlider";
+import { Services } from "@/components/pages/home/Services/Services";
+import { Values } from "@/components/pages/home/Values/Values";
+import { ImageGrid } from "@/components/pages/blocks/ImageGrid/ImageGrid";
+import { ContactBlock } from "@/components/pages/blocks/ContactBlock/ContactBlock";
 
 export interface HomePageProps {
   hero: IHero;

@@ -5,9 +5,8 @@ import { useWindowResize } from "../../helpers/useWindowResize";
 import { IconButton } from "../reuse/IconButton";
 import cn from "classnames";
 import FlexDiv from "../reuse/FlexDiv";
-import { ReactComponent as Logo } from "../../assets/illu/LogoSmall.svg";
 import { Button } from "../reuse/Button";
-import { ICta, INavBar, INavLink } from "../../data.d";
+import { ICta, INavBar, INavLink } from "@/app/data";
 import { LangSwitcher } from "./LangSwitcher/LangSwitcher";
 import { SanityImage } from "../reuse/SanityImage/SanityImage";
 
@@ -15,14 +14,14 @@ export const isCta = (link: INavLink | ICta): link is ICta => {
   return (link as ICta).link !== undefined;
 };
 
-export const Navbar: React.FC<INavBar> = ({ links, logo, lang }) => {
+export const Navbar: React.FC<INavBar> = ({ links, logo }) => {
   const { isMobile, isMobileOrTablet } = useWindowResize();
 
   const [scrolled, setScrolled] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = (e: Event) => {
+    const handleScroll = () => {
       const offset = navRef?.current?.clientHeight!;
       const isScrolled = window.scrollY > offset;
       setScrolled(isScrolled);
@@ -33,6 +32,8 @@ export const Navbar: React.FC<INavBar> = ({ links, logo, lang }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [navRef]);
+
+  console.log(logo);
 
   return (
     <>

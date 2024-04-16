@@ -5,7 +5,7 @@ import React, {
 } from "react";
 import styles from "./Link.module.scss";
 import cn from "classnames";
-import { NavLink } from "react-router-dom";
+import NavLink from "next/link";
 
 export interface LinkProps {
   children: string | ReactNode;
@@ -22,9 +22,10 @@ export const Link: React.FC<PropsWithChildren<
   };
 
   return path ? (
-    <NavLink {...linkProps} to={path}>
-      {children}
-    </NavLink>
+    // <NavLink {...linkProps}>
+    //   {children}
+    // </NavLink>
+    <></>
   ) : (
     <a {...linkProps} about="a link">
       {children}

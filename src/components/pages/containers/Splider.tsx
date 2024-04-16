@@ -6,17 +6,13 @@ import {
   SplideTrack,
 } from "@splidejs/react-splide";
 import styles from "./Splider.module.scss";
-import "@splidejs/react-splide/styles/skyblue";
 
 import { SideContainer, SideContainerProps } from "./SideContainer";
 import cn from "classnames";
 import FlexDiv from "../../reuse/FlexDiv";
 import { Icon } from "../../reuse/Icon";
-import { SanityImage } from "../../reuse/SanityImage/SanityImage";
+import { ICustomImage, SanityImage } from "../../reuse/SanityImage/SanityImage";
 import { useWindowResize } from "../../../helpers/useWindowResize";
-import { ICustomImage } from "../../../data";
-import { shuffleArray } from "../../../helpers/functions";
-
 export interface SpliderProps {
   customImage: ICustomImage;
   content?: SideContainerProps;
@@ -141,7 +137,6 @@ export const Splider: React.FC<SpliderContainerProps> = ({
             <SanityImage
               image={splider?.customImage.image}
               alt={splider?.customImage.alt}
-              res={50}
             />
           )}
           {text && splider?.content && <SideContainer {...splider.content} />}

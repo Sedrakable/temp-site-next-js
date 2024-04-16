@@ -2,10 +2,8 @@ import React, { PropsWithChildren } from "react";
 import styles from "./Block.module.scss";
 
 import FlexDiv from "../../reuse/FlexDiv";
-import Image from "next/image";
 import cn from "classnames";
 import { Title } from "../../reuse/Title/Title";
-const bigStroke = require("../../../assets/photos/BigStroke.png");
 
 export const BlockVariants = [
   "grid",
@@ -20,16 +18,15 @@ export type BlockVariantType = typeof BlockVariants[number];
 interface BlockProps {
   title: string;
   variant: BlockVariantType;
-  strokes?: boolean;
-  shadow?: boolean;
 }
 export const Block: React.FC<PropsWithChildren<BlockProps>> = ({
   title,
   variant = "dark",
-  shadow = true,
-  strokes,
   children,
 }) => {
+  // const BigStroke = () => {
+  //   return <Image src="../../../assets/photos/BigStroke.png" alt="stroke" />;
+  // };
   return (
     <FlexDiv
       flex={{ direction: "column" }}
@@ -43,13 +40,6 @@ export const Block: React.FC<PropsWithChildren<BlockProps>> = ({
       width100
     >
       <Title title={title} color={variant == "light" ? "primary" : "white"} />
-      {strokes && variant === "dark" && (
-        <div className={styles.strokes}>
-          <Image src={bigStroke} alt="stroke" />
-          <Image src={bigStroke} alt="stroke" />
-          <Image src={bigStroke} alt="stroke" />
-        </div>
-      )}
       <FlexDiv
         className={styles.content}
         width100
