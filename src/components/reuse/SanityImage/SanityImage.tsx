@@ -1,11 +1,12 @@
 import React from "react";
 import Img from "next/image";
 import { urlFor } from "../../../api/useFetchPage";
-import { SanityImageSource, getImageDimensions } from "@sanity/asset-utils";
+import { SanityImageSource } from "@sanity/asset-utils";
 
 export interface ICustomImage {
   alt: string;
   image: SanityImageSource;
+  width?: number;
 }
 
 export const SanityImage: React.FC<ICustomImage> = ({ image, alt }) => {
@@ -17,7 +18,7 @@ export const SanityImage: React.FC<ICustomImage> = ({ image, alt }) => {
         // width={getImageDimensions(image).width}
         // height={getImageDimensions(image).height}
         fill
-        // sizes="100%"
+        loading="lazy"
         placeholder="blur"
         style={{ objectFit: "cover" }}
         blurDataURL={urlFor(image).width(24).height(24).blur(10).url()}

@@ -40,6 +40,17 @@ export const Splider: React.FC<SpliderContainerProps> = ({
   const prevArrowRef = useRef<HTMLDivElement>(null);
   const nextArrowRef = useRef<HTMLDivElement>(null);
 
+  // useEffect(() => {
+  //   if (mainRef.current) {
+  //     const splideInstance = mainRef.current.splide;
+
+  //     if (splideInstance) {
+  //       splideInstance.destroy();
+  //       splideInstance.init();
+  //     }
+  //   }
+  // }, [slides]);
+
   useEffect(() => {
     if (mainRef.current) {
       const splideInstance = mainRef.current.splide;
@@ -158,33 +169,39 @@ export const Splider: React.FC<SpliderContainerProps> = ({
     resetProgress: false,
     interval: 5000,
     arrows: false,
+    rewind: true,
+    focus: "center", // Manually set focus
   };
 
   return (
-    <div className={cn(styles.wrapper)}>
-      <Splide
-        className={styles.container}
-        options={mainOptions}
-        hasTrack={false}
-        ref={mainRef}
-      >
-        <SplideTrack className={styles.track}>{renderSlides(true)}</SplideTrack>
-      </Splide>
-      <div className={styles.ui}>
-        <FlexDiv flex={{ x: "flex-start" }} className={styles.progressBar}>
-          <div className={styles.progress} ref={progressBarRef} />
-        </FlexDiv>
-        {arrows && !isMobileOrTablet && (
-          <div className={styles.customArrows}>
-            <div ref={prevArrowRef} className={styles.prevArrow}>
-              <Icon icon="arrow" rotate={180} size="big" />
+    slides && (
+      <div className={cn(styles.wrapper)}>
+        <Splide
+          className={styles.container}
+          options={mainOptions}
+          hasTrack={false}
+          ref={mainRef}
+        >
+          <SplideTrack className={styles.track}>
+            {renderSlides(true)}
+          </SplideTrack>
+        </Splide>
+        <div className={styles.ui}>
+          <FlexDiv flex={{ x: "flex-start" }} className={styles.progressBar}>
+            <div className={styles.progress} ref={progressBarRef} />
+          </FlexDiv>
+          {arrows && !isMobileOrTablet && (
+            <div className={styles.customArrows}>
+              <div ref={prevArrowRef} className={styles.prevArrow}>
+                <Icon icon="arrow" rotate={180} size="big" />
+              </div>
+              <div ref={nextArrowRef} className={styles.nextArrow}>
+                <Icon icon="arrow" size="big" />
+              </div>
             </div>
-            <div ref={nextArrowRef} className={styles.nextArrow}>
-              <Icon icon="arrow" size="big" />
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-    </div>
+    )
   );
 };

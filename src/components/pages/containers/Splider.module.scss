@@ -5,11 +5,13 @@
   --ratio: 4/3;
   --ratio-flip: 3/4;
   --grid-gap: 5px;
+  --bottom: 32px;
   @media (min-width: $tablet) {
     --wrapper-padding-bottom: var(--pad-6);
     --ratio: 16/9;
     --ratio-flip: 9/16;
     --grid-gap: 10px;
+    --bottom: 48px;
   }
 
   @media (min-width: $laptop) {
@@ -17,6 +19,7 @@
     --ratio: unset;
     --ratio-flip: unset;
     --grid-gap: 10px;
+    --bottom: 56px;
   }
 
   @media (min-width: $desktop) {
@@ -44,7 +47,7 @@
       @include flex(flex-start);
 
       position: absolute;
-      bottom: 5%;
+      bottom: var(--bottom);
       left: 20%;
       right: 20%;
       height: 8px;
@@ -77,16 +80,21 @@
 
       .prevArrow {
         padding: var(--pad-3) var(--pad-5);
-        transform: translate(-100%, var(--pad-3));
+        transform: translateX(-100%);
         background: var(--white);
+        > * {
+          height: auto !important;
+        }
       }
 
       .nextArrow {
         padding: var(--pad-3) var(--pad-5);
 
-        transform: translate(calc(-100%), var(--pad-3));
+        transform: translateX(-100%);
         background: var(--black);
-        // border-radius: 0 60px 60px 0;
+        > * {
+          height: auto !important;
+        }
       }
     }
   }
@@ -94,6 +102,7 @@
   .content {
     @include flexColumn(stretch, stretch);
     .imgWrapper {
+      position: relative;
       height: calc(100vw * var(--ratio-flip)) !important;
       width: 100vw;
     }

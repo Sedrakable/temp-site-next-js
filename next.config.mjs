@@ -11,7 +11,7 @@ const nextConfig = {
   },
   images: {
     domains: ["cdn.sanity.io"],
-    unoptimized: true,
+    deviceSizes: [640, 1200, 1680],
   },
   // output: "export",  // <=== enables static exports
   // distDir: "dist",  // <=== change the build directory
