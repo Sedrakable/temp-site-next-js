@@ -1,4 +1,3 @@
-"use client";
 import React, { useRef, useState } from "react";
 import styles from "./Form.module.scss";
 import cn from "classnames";

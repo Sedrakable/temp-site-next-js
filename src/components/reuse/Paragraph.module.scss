@@ -47,7 +47,7 @@
 }
 
 .paragraph {
-  @include fontParagraph;
+  font-family: var(--font-anek);
   width: 100%;
 }
 

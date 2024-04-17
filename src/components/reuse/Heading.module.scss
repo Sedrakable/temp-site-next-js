@@ -47,7 +47,7 @@
 }
 
 .cursive {
-  @include fontHeaderCursive;
+  font-family: var(--font-caveat);
 
   font-weight: 600;
   @for $i from 1 through 3 {

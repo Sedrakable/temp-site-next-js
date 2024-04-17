@@ -5,6 +5,12 @@ import {
   SpacingArrayType,
   useSpacingGenerator,
 } from "../../helpers/SpacingGenerator";
+import { Caveat } from "next/font/google";
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+});
 
 export type ColorType = "white" | "black" | "primary" | "grey";
 
@@ -85,6 +91,7 @@ export const Heading: React.FC<HeadingProps> = ({
           [styles.clickable]: clickable,
           [styles.seto]: font === "Seto",
           [styles.cursive]: font === "Cursive",
+          [caveat.variable]: font === "Cursive",
         },
         className
       )}
